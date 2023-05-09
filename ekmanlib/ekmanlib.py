@@ -65,10 +65,6 @@ def wind_stress(u, v, rho_air=1.22, cd=None):
         [3] K.E. Trenberth, W.G. Large & J.G. Olson, 1990, The Mean Annual
         Cycle in Global Ocean Wind Stress, J. Physical Oceanography, v20,
         p1742-1760.
-
-    Fernando Paolo <fpaolo@ucsd.edu>
-    Mar 7, 2016
-
     """
     w = np.sqrt(u**2 + v**2) # wind speed (m/s) 
 
@@ -100,7 +96,6 @@ def wind_curl(u, v, x, y, ydim=0, xdim=1, tdim=2):
         Curl(u,v) = dv/dx - du/dy
         Units of frequency (1/s).
         The different constants come from oblateness of the ellipsoid.
-
     """
     dy = np.abs(y[1,0] - y[0,0]) # scalar in deg
     dx = np.abs(x[0,1] - x[0,0]) 
@@ -131,7 +126,6 @@ def wind_stress_curl(Tx, Ty, x, y, ydim=0, xdim=1, tdim=2):
     Notes:
         Curl(Tx,Ty) = dTy/dx - dTx/dy
         The different constants come from oblateness of the ellipsoid.
-
     """
     dy = np.abs(y[1,0] - y[0,0]) # scalar in deg
     dx = np.abs(x[0,1] - x[0,0]) 
@@ -161,7 +155,6 @@ def ekman_transport(tau_x, tau_y, y, rho_water=1028., tdim=2):
         tau_x = Wind Curl X, 2d or 3d (for time series)
         tau y = Wind Curl Y, 2d or 3d (for time series)
         y = Latitude grid, 2d
-
     """
     
     omega = 7.292115e-5 # rotation rate of the Earth (rad/s)
@@ -185,7 +178,6 @@ def ekman_pumping(curl_tau, y, rho_water=1028., tdim=2):
         We = Curl(tau)/rho*f (vertical velocity in m/s).
         f = Coriolis frequency (rad/s), latitude dependent.
         rho = Ocean water density (1028 kg/m^3).
-
     """
     # Coriolis frequency
     omega = 7.292115e-5 # rotation rate of the Earth (rad/s)
