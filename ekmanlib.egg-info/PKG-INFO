@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: ekmanlib
+Version: 0.1.0
+Summary: Library to Calculate EMT and EPV
+Home-page: https://github.com/Konfersi-Indonesia/ekmanlib.git
+Author: Konfersi Indonesia
+Author-email: konfersi.indonesia@gmail.com
+License: MIT License
+License-File: LICENSE.txt
