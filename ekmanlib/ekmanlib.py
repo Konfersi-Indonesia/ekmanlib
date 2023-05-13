@@ -158,7 +158,7 @@ def ekman_transport(tau_x, tau_y, y, rho_water=1028., tdim=2):
     """
     
     omega = 7.292115e-5 # rotation rate of the Earth (rad/s)
-    f = 2 * omega * np.sin(y * np.pi/180) # (rad/s)
+    f = np.abs(2 * omega * np.sin(y * np.pi/180)) # (rad/s)
 
     if f.shape != tau_y.shape:
         f = np.expand_dims(f, tdim)
