@@ -14,4 +14,8 @@ The library can calculate Wind Data from ERA5, CCMP, etc.
 
 ``python setup.py install --user``
 
+or 
+
+``pip install git+https://github.com/Konfersi-Indonesia/ekmanlib.git``
+
 **Konfersi Indonesia**
