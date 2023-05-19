@@ -181,7 +181,7 @@ def ekman_pumping(curl_tau, y, rho_water=1028., tdim=2):
     """
     # Coriolis frequency
     omega = 7.292115e-5 # rotation rate of the Earth (rad/s)
-    f = 2 * omega * np.sin(y * np.pi/180) # (rad/s)
+    f = np.abs(2 * omega * np.sin(y * np.pi/180)) # (rad/s)
 
     # Expand dimension for broadcasting (2d -> 3d)
     if f.shape != curl_tau.shape:
